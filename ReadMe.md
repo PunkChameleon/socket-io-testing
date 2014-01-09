@@ -1,43 +1,33 @@
 # Node Apps
+## socket.io boilerplate
 
-## Application Boilerplates
+[http://socket.io](http://socket.io)
 
-This repo contains a collection of "boilerplate applications". These are  minimal and ready-to-run node.js applications designed to get you from zero to deployed in minutes.
+![](https://github.com/nodeapps/boilerplates/raw/master/screenshots/socket.io.png)
 
-![](https://github.com/nodeapps/boilerplates/raw/master/screenshots/jitsu_install_express.png)
-
-### Is Your Boilerplate Missing?
-
-Would you like to see your framework featured in a boilerplate? We happily accept community contributions! Just fork this project, add your boilerplate in its own folder, and send us a pull request!
-
-## Installation
-
-### Install jitsu ( helps manage your node apps )
-
-    npm install jitsu -g
-
-## Installing boilerplates
+# Installation
 
     mkdir myapp
     cd myapp/
-    jitsu install <appname>
+    jitsu install socket.io
 
-*where `appname` is the name of any included boilerplate*
+*If you do not have `jitsu` installed you can install it via `npm install jitsu -g`*
 
-## Included Boilerplates
 
-```
-jitsu install dnode
-jitsu install express
-jitsu install socket.io
+# Usage
 
-```
+### Starting boilerplate locally
 
-## Usage
+    npm start
 
-After running `jitsu install <appname>`, you will be prompted to start the application locally. After testing the application locally, you can then deploy it to the cloud using the `jitsu deploy` command.
+*Now you can visit http://localhost:8080 to view your application*
 
-For additional information, each individual boilerplate folder contains it's own `ReadMe.md` file.
+### Deploy boilerplate to nodejitsu
+
+    jitsu deploy
+
+*You will now be prompted for a `subdomain` to deploy your application on*
+
 
 # License
 
