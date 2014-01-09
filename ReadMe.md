@@ -1,32 +1,6 @@
-# Node Apps
-## socket.io boilerplate
+# Socket.io Tesing
 
-[http://socket.io](http://socket.io)
-
-![](https://github.com/nodeapps/boilerplates/raw/master/screenshots/socket.io.png)
-
-# Installation
-
-    mkdir myapp
-    cd myapp/
-    jitsu install socket.io
-
-*If you do not have `jitsu` installed you can install it via `npm install jitsu -g`*
-
-
-# Usage
-
-### Starting boilerplate locally
-
-    npm start
-
-*Now you can visit http://localhost:8080 to view your application*
-
-### Deploy boilerplate to nodejitsu
-
-    jitsu deploy
-
-*You will now be prompted for a `subdomain` to deploy your application on*
+An experiment in the usage of socket.io
 
 
 # License
