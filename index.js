@@ -14,23 +14,22 @@ app.get('/', function (req, res) {
 	res.sendfile(__dirname + '/index.html');
 });
 
+
+var pollingLoop = function (socket) {
+
+	db.get('testing', function (err, doc) {
+		// Emit a message to send it to the client.
+		socket.emit('testing', doc);
+
+		socket.on('it_works', function (data) {
+			setTimeout(pollingLoop(socket), 10000);
+		})
+	});
+};
+
 //Socket.io emits this event when a connection is made.
 io.sockets.on('connection', function (socket) {
 
-	db.get('testing', function (err, doc) {
-		console.log(doc);
-		// Emit a message to send it to the client.
-		socket.emit('testing', doc);
-	});
-
-	/*// Emit a message to send it to the client.
-	socket.emit('ping', {
-		msg: 'Hello. I know socket.io.'
-	});
-
-	// Print messages from the client.
-	socket.on('pong', function (data) {
-		console.log(data.msg);
-	}); */
+	pollingLoop(socket);
 
 });
